@@ -1,5 +1,17 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %}
+g{% extends "base.html" %} {% block title %}Home{% endblock %}
 
 {% block content %}
-<p>Welcome to the home page!</p>
+<h2> Products </h2>
+<div class="row">
+    {% for product in products %} 
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">UGX {{ product.price }}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
