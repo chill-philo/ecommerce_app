@@ -7,7 +7,7 @@ This will be our data structure
 
 
 + User - this is a django user created for each custormer that registers with the website.
-  This allows the user auth using Djngo Auth
+  This allows the user auth using Django Auth.
 
 
 + Customer - Is a User model to hold one relationship with each user (OneToOneField)

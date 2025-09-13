@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models  import Product
+from .models import OrderItem
 # Create your views here.
 def home(request):
     # return HttpResponse("HELLO")
@@ -8,13 +9,17 @@ def home(request):
     print(products)
     context = {
         'products': products,
-        "product" : products[0]
+
     }
     return render(request, 'home.html',context)
 
 
 def cart(request):
-    context = {}
+    orderitem = OrderItem.objects.all()
+    context = {
+        'order_items': orderitems,
+
+    }
     return render(request, 'cart.html', context)
 
 
